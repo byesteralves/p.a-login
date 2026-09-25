@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EcoClick</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <div class="logo">
+                EcoClick
+            </div>
+
+            <a href="#">Voltar</a>
+        </header>
+
+
+        <main>
+
+
+            <section id="login">
+
+                <h1>Bem-vindo de volta!</h1>
+
+                <p class="subtitulo">
+                    Entre na sua conta e continue sua jornada sustentável.
+                </p>
+
+
+                <!-- Abas -->
+
+                <div class="abas">
+
+                    <button class="ativo">
+                        Entrar
+                    </button>
+
+                    <button onclick="mostrarCadastro()">
+                        Cadastrar
+                    </button>
+
+                </div>
+
+
+                <button class="google" onclick="googleLogin()">
+
+                    <strong>G</strong>
+
+                    Continuar com Google
+
+                </button>
+
+                <div class="ou">
+
+                    <span></span>
+
+                    <p>ou</p>
+
+                    <span></span>
+
+                </div>
+              
+                <form id="loginForm">
+
+                    <label for="emailLogin">
+                        E-MAIL
+                    </label>
+
+                    <input
+                        type="email"
+                        id="emailLogin"
+                        placeholder="voce@exemplo.com"
+                    >
+
+
+                    <label for="senhaLogin">
+                        SENHA
+                    </label>
+
+
+                    <div class="senha">
+
+                        <input
+                            type="password"
+                            id="senhaLogin"
+                            placeholder="Digite sua senha"
+                        >
+
+                        <button
+                            type="button"
+                            onclick="mostrarSenha('senhaLogin')"
+                        >
+                            👁
+                        </button>
+
+                    </div>
+
+
+                    <div class="esqueceu">
+
+                        <a href="#">
+                            Esqueceu sua senha?
+                        </a>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="cadastrar"
+                    >
+                        Entrar
+                    </button>
+
+                </form>
+
+
+                <p class="login">
+
+                    Ainda não possui uma conta?
+
+                    <a
+                        href="#"
+                        onclick="mostrarCadastro()"
+                    >
+                        Criar conta
+                    </a>
+
+                </p>
+
+            </section>
+
+
+            <section
+                id="cadastro"
+                class="escondido"
+            >
+
+                <h1>
+                    Crie sua conta grátis
+                </h1>
+
+
+                <p class="subtitulo">
+                    Comece sua jornada sustentável em menos de 1 minuto.
+                </p>
+
+                <div class="abas">
+
+                    <button onclick="mostrarLogin()">
+                        Entrar
+                    </button>
+
+                    <button class="ativo">
+                        Cadastrar
+                    </button>
+
+                </div>
+
+
+                <!-- Google -->
+
+                <button
+                    class="google"
+                    onclick="googleLogin()"
+                >
+
+                    <strong>G</strong>
+
+                    Continuar com Google
+
+                </button>
+
+                <div class="ou">
+
+                    <span></span>
+
+                    <p>ou</p>
+
+                    <span></span>
+
+                </div>
+
+                <form id="cadastroForm">
+
+
+                    <label for="nome">
+                        NOME COMPLETO
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nome"
+                        placeholder="Maria Silva"
+                    >
+
+
+                    <label for="email">
+                        E-MAIL
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="voce@exemplo.com"
+                    >
+
+
+                    <label for="senha">
+                        SENHA
+                    </label>
+
+
+                    <div class="senha">
+
+                        <input
+                            type="password"
+                            id="senha"
+                            placeholder="Mínimo 8 caracteres"
+                        >
+
+                        <button
+                            type="button"
+                            onclick="mostrarSenha('senha')"
+                        >
+                            👁
+                        </button>
+
+                    </div>
+
+
+                    <div class="linha">
+
+                        <div>
+
+                            <label for="cidade">
+                                CIDADE
+                            </label>
+
+                            <input
+                                type="text"
+                                id="cidade"
+                                placeholder="Salvador"
+                            >
+
+                        </div>
+
+
+                        <div>
+
+                            <label for="estado">
+                                ESTADO
+                            </label>
+
+                            <select id="estado">
+
+                                <option value="">
+                                    UF
+                                </option>
+
+                                <option>BA</option>
+                                <option>SP</option>
+                                <option>RJ</option>
+                                <option>MG</option>
+                                <option>PE</option>
+                                <option>CE</option>
+                                <option>RS</option>
+                                <option>PR</option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                    <div class="termos">
+
+                        <input
+                            type="checkbox"
+                            id="termos"
+                        >
+
+                        <label for="termos">
+
+                            Concordo com os
+
+                            <a href="#">
+                                termos de uso
+                            </a>
+
+                            e a
+
+                            <a href="#">
+                                política de privacidade
+                            </a>.
+
+                        </label>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="cadastrar"
+                    >
+                        Criar minha conta
+                    </button>
+
+                </form>
+
+
+                <p class="login">
+
+                    Já possui uma conta?
+
+                    <a
+                        href="#"
+                        onclick="mostrarLogin()"
+                    >
+                        Entrar
+                    </a>
+
+                </p>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+```
